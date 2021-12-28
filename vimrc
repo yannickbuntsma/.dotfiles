@@ -1,18 +1,51 @@
-" Use new regular expression engine
-set re=0
+filetype plugin indent on
 
-" Specify a directory for plugins
-" - For Neovim: stdpath('data') . '/plugged'
-" - Avoid using standard Vim directory names like 'plugin'
-call plug#begin('~/.vim/plugged')
+syntax enable
 
-" Make sure you use single quotes
+set autoindent
 
-" Use release branch (recommend)
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+set backspace=indent,eol,start
 
-command! -nargs=0 Prettier :CocCommand prettier.formatFile
+" The i option states that it will “scan current and included files”, which might pollute 
+" the autocomplete results if your current file includes a lot of other files. As such, it 
+" makes sense to disable this option.
+set complete-=1
 
-" Initialize plugin system
-call plug#end()
+set smarttab
+
+" The octal option will cause 007 to be incremented to 010 due to using base 8. In normal usage, 
+" this is not the expected behaviour since not a lot of people are using base 8 in their daily work. 
+" By disabling it, 007 will be incremented to 008.
+set nrformats-=octal
+
+" By default, the value of ttimeoutlen is -1, which will be changed to 100, but this line sets it 
+" explicitly instead. If you set ttimeoutlen to 5000, every time you hit the Esc key, it will 
+" wait 5 seconds before registering the Esc command. This is due to Vim thinking there is a chance 
+" that you will press the rest of the key codes within the 5 seconds window.
+" if !has(‘nvim’) && &ttimeoutlen == -1
+"   set ttimeout
+"   set ttimeoutlen=100
+" endif
+
+" Incremental search or incsearch allows Vim to directly go to the next matching result as you type
+"  your search keywords. Without this setting, you need to press Enter to make Vim go to the search result.
+
+set incsearch
+
+" Always show Vim status bar
+set laststatus=2
+
+set ruler
+
+" Show the possible completion above the command-line.
+set wildmenu
+
+" This will make Vim automatically read a file when it detects that the file has been changed outside of Vim.
+set autoread
+
+" Set higher history for : commands, search strings, expressions, input lines and debug mode commands.
+set history=1000
+
+" Set Vim cache file.
+set viminfo^=!
 
