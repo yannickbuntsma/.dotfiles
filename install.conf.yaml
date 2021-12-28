@@ -1,14 +1,16 @@
-- defaults
+- defaults:
     link:
       relink: true
 
 - clean: ['~']
 
 - link:
+    ~/.config/nvim: nvim
     ~/.vim: vim
     ~/.vimrc: vimrc
     ~/.tmux.conf: tmux.conf
-    ~/.iterm/: iterm
+    ~/.iterm/:
+      path: iterm/*
       glob: true
 
 - create:
