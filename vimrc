@@ -1,26 +1,34 @@
+"""""""""""""""""""""""
+"" From Vim Sensible ""
+"""""""""""""""""""""""
+
 filetype plugin indent on
 
 syntax enable
+
+" Hybrid line numbers
+:set number relativenumber
+:set nu rnu
 
 set autoindent
 
 set backspace=indent,eol,start
 
-" The i option states that it will “scan current and included files”, which might pollute 
-" the autocomplete results if your current file includes a lot of other files. As such, it 
+" The i option states that it will “scan current and included files”, which might pollute
+" the autocomplete results if your current file includes a lot of other files. As such, it
 " makes sense to disable this option.
 set complete-=1
 
 set smarttab
 
-" The octal option will cause 007 to be incremented to 010 due to using base 8. In normal usage, 
-" this is not the expected behaviour since not a lot of people are using base 8 in their daily work. 
+" The octal option will cause 007 to be incremented to 010 due to using base 8. In normal usage,
+" this is not the expected behaviour since not a lot of people are using base 8 in their daily work.
 " By disabling it, 007 will be incremented to 008.
 set nrformats-=octal
 
-" By default, the value of ttimeoutlen is -1, which will be changed to 100, but this line sets it 
-" explicitly instead. If you set ttimeoutlen to 5000, every time you hit the Esc key, it will 
-" wait 5 seconds before registering the Esc command. This is due to Vim thinking there is a chance 
+" By default, the value of ttimeoutlen is -1, which will be changed to 100, but this line sets it
+" explicitly instead. If you set ttimeoutlen to 5000, every time you hit the Esc key, it will
+" wait 5 seconds before registering the Esc command. This is due to Vim thinking there is a chance
 " that you will press the rest of the key codes within the 5 seconds window.
 " if !has(‘nvim’) && &ttimeoutlen == -1
 "   set ttimeout
@@ -48,4 +56,22 @@ set history=1000
 
 " Set Vim cache file.
 set viminfo^=!
+
+"""""""""""""""""""""""""""
+"" Personal Vim settings ""
+"""""""""""""""""""""""""""
+
+" Automatically runs Vim commands in the current dir (nice, but conflicts with
+" Telescope
+" set autochdir
+
+set termguicolors
+
+set clipboard=unnamedplus
+
+"""""""""""""
+"" Keymaps ""
+"""""""""""""
+nnoremap <SPACE> <Nop>
+let mapleader=" "
 

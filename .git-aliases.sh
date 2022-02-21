@@ -3,6 +3,7 @@
 #
 
 alias gai='git diff --name-only | fzf -m --preview "git diff --color=always -- {}" | xargs git add'
+alias gdi='git diff --name-only | fzf --preview "git diff --color=always -- {}" --preview-window=up,80%'
 alias gdo='git diff --name-only | fzf --preview "git diff --color=always -- {}" | xargs -n1 nvim'
 
 #
