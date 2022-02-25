@@ -1,12 +1,7 @@
 Plug 'preservim/nerdtree'
 
 let NERDTreeShowHidden=1
-
-" if exists("g:NERDTree") && g:NERDTree.IsOpen()
-"   nnoremap <C-l> :NERDTreeClose<CR>
-"   else
-  nnoremap <C-l> :NERDTreeFind<CR>
-" endif
+nnoremap <expr> <C-l> exists("g:NERDTree") && g:NERDTree.IsOpen() ? ":NERDTreeClose<CR>" : ":NERDTreeFind<CR>"
 
 " Start NERDTree when Vim is started without file arguments.
 autocmd StdinReadPre * let s:std_in=1
