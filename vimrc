@@ -66,8 +66,10 @@ set viminfo^=!
 " set autochdir
 
 set termguicolors
-
 set clipboard=unnamedplus
+set scrolloff=8
+set sidescrolloff=8
+set splitright
 
 """""""""""""
 "" Keymaps ""
