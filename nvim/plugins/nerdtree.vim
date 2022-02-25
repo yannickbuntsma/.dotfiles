@@ -1,5 +1,7 @@
 Plug 'preservim/nerdtree'
 
+let NERDTreeShowHidden=1
+
 " if exists("g:NERDTree") && g:NERDTree.IsOpen()
 "   nnoremap <C-l> :NERDTreeClose<CR>
 "   else
