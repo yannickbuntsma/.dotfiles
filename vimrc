@@ -71,9 +71,14 @@ set scrolloff=8
 set sidescrolloff=8
 set splitright
 
+" Highlight matching parentheses and brackets.
+DoMatchParen
+
 """""""""""""
 "" Keymaps ""
 """""""""""""
 nnoremap <SPACE> <Nop>
 let mapleader=" "
 
+" When using 'go to file', create the file if it doesn't exist.
+map gf :edit <cfile><cr>

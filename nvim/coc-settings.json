@@ -1,0 +1,13 @@
+{
+  "eslint.filetypes": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "eslint.autoFixOnSave": false,
+  "git.addGBlameToVirtualText": true,
+  "tsserver.implicitProjectConfig.checkJs": true,
+  "javascript.suggest.autoImports": true,
+  "list.height": 20
+}

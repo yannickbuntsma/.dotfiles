@@ -2,9 +2,24 @@
 # Personal aliases
 #
 
-alias gai='git diff --name-only | fzf -m --preview "git diff --color=always -- {}" | xargs git add'
+alias gai='git diff --name-only | fzf -m --preview "git diff --color=always -- {}" --preview-window=up,75% | xargs git add'
 alias gdi='git diff --name-only | fzf --preview "git diff --color=always -- {}" --preview-window=up,80%'
 alias gdo='git diff --name-only | fzf --preview "git diff --color=always -- {}" | xargs -n1 nvim'
+
+function get-pr-review-stats() {
+  limit=$1
+
+  reviews=$(gh pr list -L $limit --json author,createdAt,reviews | jq '.[] as $pr | map({ reviews: .reviews | map({ reviewer: .author.login, prCreatedAt: $pr.createdAt, submittedAt: .submittedAt}) }) | .[].reviews | .[]')
+
+  echo $reviews
+
+  for review in $reviews
+  do
+    echo $review
+
+
+  done
+}
 
 #
 # Aliases from ZSH
