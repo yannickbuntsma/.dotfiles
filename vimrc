@@ -71,9 +71,6 @@ set scrolloff=8
 set sidescrolloff=8
 set splitright
 
-" Highlight matching parentheses and brackets.
-DoMatchParen
-
 """""""""""""
 "" Keymaps ""
 """""""""""""
