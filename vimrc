@@ -79,3 +79,8 @@ let mapleader=" "
 
 " When using 'go to file', create the file if it doesn't exist.
 map gf :edit <cfile><cr>
+
+" d still 'cuts' and p still 'pastes', while <leader>d deletes for real and <leader>p throws away the selected text and pastes the content of the default register. <leader>p allows me to paste the same text multiple times without having to use named registers.
+nnoremap <leader>d "_d
+xnoremap <leader>d "_d
+xnoremap <leader>p "_dP

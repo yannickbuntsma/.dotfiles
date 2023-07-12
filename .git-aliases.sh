@@ -5,6 +5,7 @@
 alias gai='git diff --name-only | fzf -m --preview "git diff --color=always -- {}" --preview-window=up,75% | xargs git add'
 alias gdi='git diff --name-only | fzf --preview "git diff --color=always -- {}" --preview-window=up,80%'
 alias gdo='git diff --name-only | fzf --preview "git diff --color=always -- {}" | xargs -n1 nvim'
+alias gcoi='git branch --sort=-committerdate | fzf | xargs git checkout'
 
 function get-pr-review-stats() {
   limit=$1

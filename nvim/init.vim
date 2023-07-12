@@ -22,7 +22,7 @@ source ~/.dotfiles/nvim/plugins/editorconfig.vim
 source ~/.dotfiles/nvim/plugins/floaterm.vim
 source ~/.dotfiles/nvim/plugins/fugitive.vim
 source ~/.dotfiles/nvim/plugins/gitgutter.vim
-source ~/.dotfiles/nvim/plugins/graphql.vim
+" source ~/.dotfiles/nvim/plugins/graphql.vim
 source ~/.dotfiles/nvim/plugins/nerdtree.vim
 source ~/.dotfiles/nvim/plugins/prettier.vim
 source ~/.dotfiles/nvim/plugins/polyglot.vim
@@ -48,11 +48,11 @@ let g:airline_theme = "palenight"
 hi htmlArg    gui=italic
 hi Comment    gui=italic
 hi Type       gui=italic
-hi Function   gui=italic
+hi Keyword    gui=italic
 hi htmlArg    cterm=italic
 hi Comment    cterm=italic
 hi Type       cterm=italic
-hi Function   cterm=italic
+hi Keyword    cterm=italic
 
 " Keymaps "
 nnoremap << :bp<cr>
